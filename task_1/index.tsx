@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component, memo } from "react";
 
 type IUser = {
   name: string;
@@ -10,7 +10,7 @@ type IProps = {
 };
 
 // functional component
-const FirstComponent = React.memo(
+const FirstComponent = memo(
   ({ name, age }: IUser) => (
     <div>
       my name is {name}, my age is {age}
@@ -21,7 +21,7 @@ const FirstComponent = React.memo(
 
 // functional component
 // Этот компонент является необязательным для выполнения задания, но продемонстрирует глубину знаний в React.
-const SecondComponent = React.memo(
+const SecondComponent = memo(
   ({ user: { name, age } }: IProps) => (
     <div>
       my name is {name}, my age is {age}
